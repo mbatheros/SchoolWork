@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MkenyaTimaam Duka </title>
+<link rel="stylesheet" href="style.css">
+<script src="modernizr.custom.05819.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+		<div id="logo"> 
+			<img src="logo.png" alt="logo" height="150" width="200"> 
+		</div>
+			<img src="tree.jpg" alt="Tree" height="150" width="200">
+			<h1>MkenyaTimaam Duka</h1>
+			<p id="Demo"></p>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="live.html">CLOTHING</a></li>
+				<li><a href="links.html">USEFUL LINKS</a></li>
+				<li><a href="legal.html">FOODSTUFF</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="contact.html">CURIOS</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h2>Kenyan Shopping</h2>
+			
+			
+	<article>
+	<div class="overflow">
+      <h2>New Shirts</h2>
+      <form>
+         <input type="checkbox" id="item1" value="10" />
+         <label for="item1">Shirt 1 $10<img src="shirt1.jpg" alt="shirt1"  width="200"> </label>
+         <input type="checkbox" id="item2" value="10" />
+         <label for="item2">Shirt 2 $10<img src="shirt2.jpg" alt="shirt2"  width="200"></label>
+         <input type="checkbox" id="item3" value="10" />
+         <label for="item3">Shirt 3 $10<img src="shirt3.jpg" alt="shirt3"  width="200"></label>
+         <input type="checkbox" id="item4" value="10" />
+         <label for="item4">Shirt 4 $10<img src="shirt4.jpg" alt="shirt4"  width="200"></label>
+         <input type="submit" id="submita" value="Submit" />
+      </form>
+	  </div>
+   </article>
+   
+		</main>
+		<footer><p>Copyright &copy; 2020 MkenyaTimaam<br><a href="mailto:mbatheros@mkenyatimaam.com">mbatheros@mkenyatimaam.com</a></p></footer>
+	</div>
+	<script>
+	function calcTotal() {
+			var itemTotal = 0;
+			var item1 = document.getElementById ("item1");
+			var item2 = document.getElementById ("item2");
+			var item3 = document.getElementById ("item3");
+			var item4 = document.getElementById ("item4");
+			var item5 = document.getElementById ("item5");
+			(item1.checked) ? (itemTotal +=10) : (itemTotal += 0);
+			(item2.checked) ? (itemTotal +=10) : (itemTotal += 0);
+			(item3.checked) ? (itemTotal +=10) : (itemTotal += 0);
+			(item4.checked) ? (itemTotal +=10) : (itemTotal += 0);
+			(item5.checked) ? (itemTotal +=10) : (itemTotal += 0);
+			var salesTaxRate = 0.07;
+			itemTotal *=100;
+			var orderTotal = (itemTotal + (itemTotal * salesTaxRate))/100;
+			alert("Your order total is $" + orderTotal);
+			}
+			document.getElementById("submita") . addEventListener ("click", calcTotal, false);
+		var day;
+		switch (new Date().getDay()) {
+			case 0:
+			day = "Sunday";
+			break;
+			case 1:
+			day = "Monday";
+			break;
+			case 2:
+			day = "Tuesday";
+			break;
+			case 3:
+			day = "Wednesday";
+			break;
+			case 4:
+			day = "Thursday";
+			break;
+			case 5:
+			day = "Friday";
+			break;
+			case  6:
+			day = "Saturday";
+			}
+			document.getElementById("Demo").innerHTML = "Happy " + day;
+	</script>
+			
+</body>
+</html>

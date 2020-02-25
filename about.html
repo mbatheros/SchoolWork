@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MkenyaTimaam Duka </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+		<div id="logo"> 
+			<img src="logo.png" alt="logo" height="150" width="200"> 
+		</div>
+			<img src="tree.jpg" alt="Tree" height="150" width="200">
+			<h1>MkenyaTimaam Duka</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="live.html">CLOTHING</a></li>
+				<li><a href="links.html">USEFUL LINKS</a></li>
+				<li><a href="legal.html">FOODSTUFF</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="contact.html">CURIOS</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h2>About Us</h2>
+			<div>
+			
+<h1 style="text-align: center"> Create an Account </h1>           
+<form name="RegForm" action="/submit.php" onsubmit="return mkenyaTimaam()" method="post">  
+      
+    <p>Name: <input type="text" size=65 name="Name"> </p><br>        
+    <p> Address: <input type="text" size=65 name="Address">  </p><br> 
+    <p>E-mail Address: <input type="text" size=65 name="EMail">  </p><br> 
+     <p>Password: <input type="text" size=65 name="Password"> </p><br> 
+    <p>Telephone: <input type="text" size=65 name="Telephone"> </p><br>   
+           
+    <p>SELECT YOUR COURSE    
+        <select type="text" value="" name="Subject"> 
+            <option>FOODSTUFF</option> 
+            <option>RECIPES</option> 
+            <option>CLOTHING</option> 
+            <option>CURIOS</option> 
+            <option>LEISURE</option> 
+        </select></p><br><br> 
+    <p>Comments:  <textarea cols="55" name="Comment">  </textarea></p> 
+    <p><input type="submit" value="send" name="Submit">      
+        <input type="reset" value="Reset" name="Reset">   
+    </p>          
+</form> 
+</div>
+
+			
+			
+		</main>
+		<footer>Copyright &copy; 2020 MkenyaTimaam<br><a href="mailto:mbatheros@mkenyatimaam.com">mbatheros@mkenyatimaam.com</a></footer>
+	</div>
+	<script> 
+function mkenyaTimaam()                                    
+{ 
+    var name = document.forms["RegForm"]["Name"];               
+    var email = document.forms["RegForm"]["EMail"];    
+    var phone = document.forms["RegForm"]["Telephone"];  
+    var what =  document.forms["RegForm"]["Subject"];  
+    var password = document.forms["RegForm"]["Password"];  
+    var address = document.forms["RegForm"]["Address"];  
+   
+    if (name.value == "")                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    } 
+   
+    if (address.value == "")                               
+    { 
+        window.alert("Please enter your address."); 
+        address.focus(); 
+        return false; 
+    } 
+       
+    if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (phone.value == "")                           
+    { 
+        window.alert("Please enter your telephone number."); 
+        phone.focus(); 
+        return false; 
+    } 
+   
+    if (password.value == "")                        
+    { 
+        window.alert("Please enter your password"); 
+        password.focus(); 
+        return false; 
+    } 
+   
+    if (what.selectedIndex < 1)                  
+    { 
+        alert("Please enter your course."); 
+        what.focus(); 
+        return false; 
+    } 
+   
+    return true; 
+}</script> 
+</body>
+</html>
